@@ -1,40 +1,22 @@
 fileFormatVersion: 2
-guid: 35c41199bf6c4fc42a2cc060fc27594d
-timeCreated: 1522426572
+guid: 23080345b85b9104b921eca867c0b052
+timeCreated: 1522431993
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Branch
-    100004: Branch_01
-    100006: Branch_02
     400000: //RootNode
-    400002: Branch
-    400004: Branch_01
-    400006: Branch_02
-    2300000: Branch
-    2300002: Branch_01
-    2300004: Branch_02
-    3300000: Branch
-    3300002: Branch_01
-    3300004: Branch_02
+    2100000: Stone
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Branch_01
-    4300002: Branch
-    4300004: Branch_02
-    7400000: Default Take
-    9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Stone
-    second: {fileID: 2100000, guid: fa0b55e77f527a541a9a6921cf516541, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -103,7 +85,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -7,8 +7,11 @@ public class FallingObject : MonoBehaviour {
 	public float speed = 10f;
 
 	void Update () {
+
+		//add movement
 		transform.position += Vector3.down * speed * Time.deltaTime;
 
+		//destroy if below ground
 		if (transform.position.y < -2f) {
 			Destroy (gameObject, 5f);
 		}

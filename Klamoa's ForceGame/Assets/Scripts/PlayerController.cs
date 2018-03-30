@@ -17,10 +17,13 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		//get the input
 		float inputX = Input.GetAxisRaw ("Horizontal");
 
+		//calculate force
 		calculatedForce = Vector3.right * inputX * force * Time.deltaTime;
 
+		//add force to rigidBody
 		rb.AddForce (calculatedForce);
 
 	}

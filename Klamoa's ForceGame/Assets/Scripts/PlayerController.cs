@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
 
 		float inputX = Input.GetAxisRaw ("Horizontal");
 
-		calculatedForce = Vector3.right * inputX * force;
+		calculatedForce = Vector3.right * inputX * force * Time.deltaTime;
 
 		rb.AddForce (calculatedForce);
 

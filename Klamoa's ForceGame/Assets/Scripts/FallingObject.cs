@@ -6,6 +6,8 @@ public class FallingObject : MonoBehaviour {
 
 	public float speed = 10f;
 
+	private bool triggered = true;
+
 	void Update () {
 
 		//add movement
@@ -17,11 +19,10 @@ public class FallingObject : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter(Collision other) {
-		if (other.gameObject.tag == "ground") {
-			print ("sore");
+	void OnTriggerEnter(Collider other) {
+		if (other.gameObject.tag == "ground" && triggered) {
 			GameManager.score += 1;
+			triggered = false;
 		}
-		print ("OnCollisionEnter");
 	}
 }

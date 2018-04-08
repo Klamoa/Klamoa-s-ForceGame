@@ -19,13 +19,22 @@ public class PlayerController : MonoBehaviour {
 		
 		//Keyboard INPUT
 		//get the input
-		float inputX = Input.GetAxisRaw ("Horizontal");
+		if(GameManager.alive){
+			float inputX = Input.GetAxisRaw ("Horizontal");
 
-		//calculate force
-		calculatedForce = Vector3.right * inputX * force * Time.deltaTime;
+			//calculate force
+			calculatedForce = Vector3.right * inputX * force * Time.deltaTime;
 
-		//add force to rigidBody
-		rb.AddForce (calculatedForce);
+			//add force to rigidBody
+			rb.AddForce (calculatedForce);
+		}
+	}
 
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.gameObject.tag == "fallingObject"){
+			Debug.Log("Got hit!");
+			GameManager.alive = false;
+		}
 	}
 }

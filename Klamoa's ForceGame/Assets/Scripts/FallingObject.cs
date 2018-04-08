@@ -25,4 +25,5 @@ public class FallingObject : MonoBehaviour {
 			triggered = false;
 		}
 	}
+
 }

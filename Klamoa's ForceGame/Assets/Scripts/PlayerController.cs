@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.gameObject.tag == "fallingObject"){
-			Debug.Log("Got hit!");
+			//Debug.Log("Got hit!");
 			GameManager.alive = false;
 		}
 	}

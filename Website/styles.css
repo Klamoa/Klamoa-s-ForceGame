@@ -1,38 +1,70 @@
 body{
     font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+    margin-top: -21px;
 }
 
 .header{
+    color: white;
     height: 600px;
-    background-image: url("img/header-background.jpg");
+    background-image: url("img/header-background-new.jpg");
     background-size: cover;
     background-position: 50% 60%;
 }
 
 .container{
+    text-shadow: 0px 0px 20px black;
     margin-left: auto;
     margin-right: auto;
     max-width: 900px;
+    min-width: 420px;
 }
 
-.header-slogan{
+.header-brand{
+    margin-top: 6.8%;
     float: left;
 }
 
-.header-slogan a{
-    font-size: 150%;
+.header-brand a{
+    font-size: 200%;
     font-weight: bold;
     text-decoration: none;
     color: white;
 }
 
 .header-navbar{
+    margin-top: 5.8%;
     float: right;
-    color: white;
 }
 
 .header-navbar li{
+    font-size: 150%;
     margin-left: 25px;
     list-style: none;
     float: left;
+}
+
+.header-navbar li a{
+    color: white;
+}
+
+.header-slogan{
+    text-align: center;
+    margin-top: 15%;
+}
+
+.header-slogan-top{
+    font-size: 350%;
+    margin-bottom: 7%;
+}
+
+.header-download-link{
+    /*display: block;*/
+    color: white;
+    border: 2px solid white;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 300%;
 }

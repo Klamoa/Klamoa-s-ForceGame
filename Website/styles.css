@@ -1,5 +1,6 @@
 body{
     font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(230, 230, 230);
     margin: 0px;
     margin-top: -21px;
 }
@@ -21,12 +22,12 @@ body{
 }
 
 .header-brand{
-    margin-top: 6.8%;
+    margin-top: 7.8%;
     float: left;
 }
 
 .header-brand a{
-    font-size: 200%;
+    font-size: 250%;
     font-weight: bold;
     text-decoration: none;
     color: white;
@@ -39,7 +40,7 @@ body{
 
 .header-navbar li{
     font-size: 150%;
-    margin-left: 25px;
+    margin-left: 15px;
     list-style: none;
     float: left;
 }

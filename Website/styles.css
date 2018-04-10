@@ -1,5 +1,5 @@
 body{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Jua', sans-serif;
     background-color: rgb(230, 230, 230);
     margin: 0px;
     margin-top: -21px;
@@ -7,7 +7,8 @@ body{
 
 .header{
     color: white;
-    height: 600px;
+    min-height: 1000px;
+    max-height: 1440px;
     background-image: url("img/header-background-new.jpg");
     background-size: cover;
     background-position: 50% 60%;
@@ -17,7 +18,7 @@ body{
     text-shadow: 0px 0px 20px black;
     margin-left: auto;
     margin-right: auto;
-    max-width: 900px;
+    max-width: 1200px;
     min-width: 420px;
 }
 
@@ -40,7 +41,7 @@ body{
 
 .header-navbar li{
     font-size: 150%;
-    margin-left: 15px;
+    margin-left: 25px;
     list-style: none;
     float: left;
 }
@@ -51,7 +52,7 @@ body{
 
 .header-slogan{
     text-align: center;
-    margin-top: 15%;
+    margin-top: 20%;
 }
 
 .header-slogan-top{

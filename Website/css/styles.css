@@ -7,19 +7,11 @@ body{
 
 .header{
     color: white;
-    min-height: 1000px;
+    min-height: 970px;
     max-height: 1440px;
-    background-image: url("img/header-background-new.jpg");
+    background-image: url("../img/header-background-new.jpg");
     background-size: cover;
     background-position: 50% 60%;
-}
-
-.container{
-    text-shadow: 0px 0px 20px black;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
-    min-width: 420px;
 }
 
 .header-brand{
@@ -35,7 +27,7 @@ body{
 }
 
 .header-navbar{
-    margin-top: 5.8%;
+    margin-top: 8%;
     float: right;
 }
 
@@ -46,9 +38,16 @@ body{
     float: left;
 }
 
+.link-icon{
+    color: white;
+    font-size: 300%;
+}
+
+/*
 .header-navbar li a{
     color: white;
 }
+*/
 
 .header-slogan{
     text-align: center;

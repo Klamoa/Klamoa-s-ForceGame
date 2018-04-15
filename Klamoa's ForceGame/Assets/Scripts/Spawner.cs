@@ -5,18 +5,27 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
 
 	public GameObject[] spawnObjects;
-	public float timeBetweenSpawn = 2f;
+	public float minTimeBetweenSpawns = 0.5f;
+	public float maxTimeBetweenSpawns = 2f;
+	public float timeBetweenSpawn;
 	public float screenHalfWith = 4.3f;
 
-	float nextSpawn;
+	private float nextSpawn;
 
 	void Update () {
+
+		if (!GameManager.alive){
+			timeBetweenSpawn = maxTimeBetweenSpawns;
+		}
 
 		if(GameManager.alive){
 			//spawn gameObject every 'timeBetweenSpawn'
 			if (Time.time > nextSpawn) {
 				//calculate next spawnTime
 				nextSpawn = Time.time + timeBetweenSpawn;
+				if (timeBetweenSpawn >= minTimeBetweenSpawns) {
+					timeBetweenSpawn -= 0.05f;
+				}
 
 				//choose gmaeObject of spawnObjects
 				int randomObject = Random.Range (0, spawnObjects.Length);
@@ -27,7 +36,8 @@ public class Spawner : MonoBehaviour {
 				GameObject myObject = (GameObject)Instantiate (spawnObjects[randomObject], spawnPosition, Quaternion.identity);
 
 				//applying scale
-				myObject.transform.localScale = new Vector3 (1, 1, 1);
+				float randomScale = Random.Range(0.8f, 1.2f);
+				myObject.transform.localScale = new Vector3 (randomScale, randomScale, randomScale);
 
 				//givng mesh a random colour
 				//MeshRenderer myMeshRenderer = myObject.GetComponent<MeshRenderer> ();

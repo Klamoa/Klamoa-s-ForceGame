@@ -5647,7 +5647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnObjects:
-  - {fileID: 1577232425544462, guid: 6c02e650e4e266d468eba36305fc7749, type: 2}
+  - {fileID: 1274965183620444, guid: 6c02e650e4e266d468eba36305fc7749, type: 2}
   - {fileID: 1577232425544462, guid: a6869d0298b25e84c885ae258ba788f8, type: 2}
   - {fileID: 1577232425544462, guid: ce05292df787dcb47a7927477702866b, type: 2}
   timeBetweenSpawn: 2

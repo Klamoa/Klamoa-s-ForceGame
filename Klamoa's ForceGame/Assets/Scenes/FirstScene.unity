@@ -677,6 +677,7 @@ MonoBehaviour:
 =======
   highScore: 0
   levelStartScreen: {fileID: 2048861857}
+  gameOverScreen: {fileID: 475038306}
   player: {fileID: 1159186270}
   scoreText: {fileID: 1893183457}
   highScoreText: {fileID: 768151602}

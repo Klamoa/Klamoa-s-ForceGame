@@ -5,18 +5,27 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
 
 	public GameObject[] spawnObjects;
-	public float timeBetweenSpawn = 2f;
+	public float minTimeBetweenSpawns = 0.5f;
+	public float maxTimeBetweenSpawns = 2f;
+	public float timeBetweenSpawn;
 	public float screenHalfWith = 4.3f;
 
 	float nextSpawn;
 
 	void Update () {
 
+		if (!GameManager.alive){
+			timeBetweenSpawn = maxTimeBetweenSpawns;
+		}
+
 		if(GameManager.alive){
 			//spawn gameObject every 'timeBetweenSpawn'
-			if (Time.time > nextSpawn) {
+			if (Time.time > nextSpawn){
 				//calculate next spawnTime
 				nextSpawn = Time.time + timeBetweenSpawn;
+				if (timeBetweenSpawn >= minTimeBetweenSpawns){
+					timeBetweenSpawn -= 0.05f;
+				}
 
 				//choose gmaeObject of spawnObjects
 				int randomObject = Random.Range (0, spawnObjects.Length);

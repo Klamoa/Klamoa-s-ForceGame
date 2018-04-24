@@ -32,11 +32,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-<<<<<<< HEAD
 		if(other.gameObject.tag == "fallingObject"){
-=======
-		if(other.gameObject.tag == "fallingObject") {
->>>>>>> 80eb15887c6c33487661cbf00bccf137803e96f5
 			GameManager.alive = false;
 			foreach(GameObject g in GameObject.FindGameObjectsWithTag("fallingObject")) {
 				Destroy(g);

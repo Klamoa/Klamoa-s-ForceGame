@@ -11,7 +11,6 @@ public class FallingObject : MonoBehaviour {
 	void Update () {
 
 		//add movement
-		speed = Random.Range(5f, 10f);
 		transform.position += Vector3.down * speed * Time.deltaTime;
 
 		//destroy if below ground

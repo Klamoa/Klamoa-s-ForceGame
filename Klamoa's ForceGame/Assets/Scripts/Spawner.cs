@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour {
 	public float timeBetweenSpawn;
 	public float screenHalfWith = 4.3f;
 
-	private float nextSpawn;
+	float nextSpawn;
 
 	void Update () {
 
@@ -23,11 +23,7 @@ public class Spawner : MonoBehaviour {
 			if (Time.time > nextSpawn){
 				//calculate next spawnTime
 				nextSpawn = Time.time + timeBetweenSpawn;
-<<<<<<< HEAD
 				if (timeBetweenSpawn >= minTimeBetweenSpawns){
-=======
-				if (timeBetweenSpawn >= minTimeBetweenSpawns) {
->>>>>>> 80eb15887c6c33487661cbf00bccf137803e96f5
 					timeBetweenSpawn -= 0.05f;
 				}
 
@@ -40,8 +36,7 @@ public class Spawner : MonoBehaviour {
 				GameObject myObject = (GameObject)Instantiate (spawnObjects[randomObject], spawnPosition, Quaternion.identity);
 
 				//applying scale
-				float randomScale = Random.Range(0.8f, 1.2f);
-				myObject.transform.localScale = new Vector3 (randomScale, randomScale, randomScale);
+				myObject.transform.localScale = new Vector3 (1, 1, 1);
 
 				//givng mesh a random colour
 				//MeshRenderer myMeshRenderer = myObject.GetComponent<MeshRenderer> ();

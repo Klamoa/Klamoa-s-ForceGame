@@ -5,13 +5,16 @@ body{
     margin-top: -21px;
 }
 
+/* HEADER */
+
 .header{
     color: white;
     min-height: 970px;
     max-height: 1440px;
-    background-image: url("../img/header-background-new.jpg");
+    background-image: url("../img/header-img.jpg");
     background-size: cover;
     background-position: 50% 60%;
+    text-shadow: 0 0 5px black;
 }
 
 .header-brand{
@@ -51,7 +54,7 @@ body{
 
 .header-slogan{
     text-align: center;
-    margin-top: 20%;
+    margin-top: 30%;
 }
 
 .header-slogan-top{
@@ -69,3 +72,5 @@ body{
     padding-left: 20px;
     font-size: 300%;
 }
+
+/* SECTION A */

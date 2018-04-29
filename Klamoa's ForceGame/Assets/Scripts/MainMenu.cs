@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
+	void Awake() {		
+		//only for no FullscreenScreen.fullScreen = !Screen.fullScreen;
+		Screen.SetResolution(1080, 1920, false);
+	}
+
 	public void StartButton () {
 		SceneManager.LoadScene (1);
 	}

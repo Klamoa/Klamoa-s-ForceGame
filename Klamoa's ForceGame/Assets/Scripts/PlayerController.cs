@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour {
 
 	public Vector3 calculatedForce;
 	public float force = 10f;
+	public Rect rectLeft;
+	public Rect rectRight;
 
 	private Rigidbody rb;
 
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+#if UNITY_STANDALONE		
 		//Keyboard INPUT
 		//get the input
 		if(GameManager.alive){
@@ -24,10 +27,41 @@ public class PlayerController : MonoBehaviour {
 
 			//calculate force
 			calculatedForce = Vector3.right * inputX * force * Time.deltaTime;
-
-			//add force to rigidBody
-			rb.AddForce (calculatedForce);
+		} else {
+			calculatedForce = Vector3.right * 0f;
 		}
+#endif
+		
+#if UNITY_ANDROID
+
+		if(GameManager.alive){
+
+			//Mobile Input
+			if(Input.touchCount > 0){
+
+				Touch touch = Input.touches[0];
+
+				if(rectLeft.Contains(touch.position)){
+					if(Input.GetButton("Fire1")){
+						//Debug.Log("Left");
+						calculatedForce = -Vector3.right * force * Time.deltaTime;
+					}
+				}
+
+				if(rectRight.Contains(Input.mousePosition)){
+					if(Input.GetButton("Fire1")){
+						//Debug.Log("Right");
+						calculatedForce = Vector3.right * force * Time.deltaTime;
+					}
+				}
+			} else {
+				calculatedForce = Vector3.right * 0f;
+			}
+		}
+#endif
+
+		//add force to rigidBody
+		rb.AddForce (calculatedForce);
 	}
 
 	void OnTriggerEnter(Collider other)

@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour {
 			} else {
 				calculatedForce = Vector3.right * 0f;
 			}
+		} else {
+			calculatedForce = Vector3.right * 0f;
 		}
 #endif
 

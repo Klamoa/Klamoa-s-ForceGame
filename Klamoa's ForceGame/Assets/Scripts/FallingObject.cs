@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class FallingObject : MonoBehaviour {
 
-	public float speed = 10f;
+	public float speedMax = 15f;
+	public float speedMin = 8f;
+	float randomSpeed;
 
 	private bool triggered = true;
+
+	void Start () {
+		randomSpeed = Random.Range(speedMin, speedMax);
+	}
 
 	void Update () {
 
 		//add movement
-		transform.position += Vector3.down * speed * Time.deltaTime;
+		transform.position += Vector3.down * randomSpeed * Time.deltaTime;
 
 		//destroy if below ground
 		if (transform.position.y < -1f) {

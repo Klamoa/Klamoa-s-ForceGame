@@ -68,10 +68,6 @@ public class GameManager : MonoBehaviour {
 		ResetGame();
 	}
 
-	public void MenuButton () {	
-		SceneManager.LoadScene (0);
-	}
-
 	public void GameOverOrPause () {
 		alive = false;
 		foreach(GameObject g in GameObject.FindGameObjectsWithTag("fallingObject")) {

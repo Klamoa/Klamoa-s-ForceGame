@@ -52,7 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: aa8c9a8988f3e16409bad5a5260aa523, type: 2}
-  audioSlider: {fileID: 0}
   sounds:
   - name: MainTheme
     clip: {fileID: 8300000, guid: 1702b10e950a8ce40b815f09a28a2c6a, type: 3}

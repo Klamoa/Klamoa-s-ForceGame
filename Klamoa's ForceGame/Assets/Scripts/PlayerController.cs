@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
 	public float force = 10f;
 	public Rect rectLeft;
 	public Rect rectRight;
+	public ParticleSystem windEffectRight;
+	public ParticleSystem windEffectLeft;
 
 	private Rigidbody rb;
 
@@ -64,6 +66,22 @@ public class PlayerController : MonoBehaviour {
 
 		//add force to rigidBody
 		rb.AddForce (calculatedForce);
+
+		if(calculatedForce.x > 0f && !windEffectLeft.isPlaying){
+			//Debug.Log("WindLeft");
+			windEffectLeft.Play();
+		}
+
+		if(calculatedForce.x < 0f && !windEffectRight.isPlaying){
+			//Debug.Log("WindRight");
+			windEffectRight.Play();
+		}
+
+		if(calculatedForce.x == 0f){
+			windEffectLeft.Stop();
+			windEffectRight.Stop();
+		}
+
 	}
 
 	void OnTriggerEnter(Collider other)

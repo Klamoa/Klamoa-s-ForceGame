@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1830998382287064}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.57, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 0.49214166, y: 0.49214166, z: 0.49214166}
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,6 +125,8 @@ MonoBehaviour:
     y: 100
     width: 300
     height: 300
+  windEffectRight: {fileID: 0}
+  windEffectLeft: {fileID: 0}
 --- !u!136 &136257091857498956
 CapsuleCollider:
   m_ObjectHideFlags: 1

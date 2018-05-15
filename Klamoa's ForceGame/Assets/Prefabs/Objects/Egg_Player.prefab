@@ -111,7 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f46f70e56857a346a0fbf2334d93ffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  calculatedForce: {x: 0, y: 0, z: 0}
   force: 300
   rectLeft:
     serializedVersion: 2
@@ -125,8 +124,10 @@ MonoBehaviour:
     y: 100
     width: 300
     height: 300
-  windEffectRight: {fileID: 0}
-  windEffectLeft: {fileID: 0}
+  windEffectRight: {fileID: 198987039298923142, guid: f0a211cd1d2a74742b6b640ed134800e,
+    type: 2}
+  windEffectLeft: {fileID: 198068177491716650, guid: a943c474a4f055a4bb6df653f52d40b2,
+    type: 2}
 --- !u!136 &136257091857498956
 CapsuleCollider:
   m_ObjectHideFlags: 1

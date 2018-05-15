@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	public Vector3 calculatedForce;
+	private Vector3 calculatedForce;
 	public float force = 10f;
 	public Rect rectLeft;
 	public Rect rectRight;
@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
 	public ParticleSystem windEffectLeft;
 
 	private Rigidbody rb;
+	private bool windleftBool = false;
+	private bool windrightBool = false;
 
 	// Use this for initialization
 	void Start () {
@@ -67,19 +69,25 @@ public class PlayerController : MonoBehaviour {
 		//add force to rigidBody
 		rb.AddForce (calculatedForce);
 
-		if(calculatedForce.x > 0f && !windEffectLeft.isPlaying){
+		if(calculatedForce.x > 0f && !windleftBool){
 			//Debug.Log("WindLeft");
 			windEffectLeft.Play();
+			windEffectRight.Stop();
+			windleftBool = true;
 		}
 
-		if(calculatedForce.x < 0f && !windEffectRight.isPlaying){
+		if(calculatedForce.x < 0f && !windrightBool){
 			//Debug.Log("WindRight");
 			windEffectRight.Play();
+			windEffectLeft.Stop();
+			windrightBool = true;
 		}
 
 		if(calculatedForce.x == 0f){
 			windEffectLeft.Stop();
 			windEffectRight.Stop();
+			windleftBool = false;
+			windrightBool = false;
 		}
 
 	}

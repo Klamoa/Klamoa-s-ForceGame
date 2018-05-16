@@ -124,10 +124,9 @@ MonoBehaviour:
     y: 100
     width: 300
     height: 300
-  windEffectRight: {fileID: 198987039298923142, guid: f0a211cd1d2a74742b6b640ed134800e,
-    type: 2}
-  windEffectLeft: {fileID: 198068177491716650, guid: a943c474a4f055a4bb6df653f52d40b2,
-    type: 2}
+  windEffectRight: {fileID: 0}
+  windEffectLeft: {fileID: 0}
+  myAudioManager: {fileID: 0}
 --- !u!136 &136257091857498956
 CapsuleCollider:
   m_ObjectHideFlags: 1

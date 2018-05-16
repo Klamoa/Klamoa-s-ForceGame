@@ -55,7 +55,14 @@ MonoBehaviour:
   sounds:
   - name: MainTheme
     clip: {fileID: 8300000, guid: 1702b10e950a8ce40b815f09a28a2c6a, type: 3}
-    volume: 0.2
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    mixerGroup: {fileID: 24300002, guid: aa8c9a8988f3e16409bad5a5260aa523, type: 2}
+  - name: WindSound
+    clip: {fileID: 8300000, guid: c5c068deddf034e4eb648c52750f1ea6, type: 3}
+    volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}

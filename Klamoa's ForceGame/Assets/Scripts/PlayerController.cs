@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 	public ParticleSystem windEffectLeft;
 
 	private Rigidbody rb;
+	private AudioManager myAudioManager;
 	private bool windleftBool = false;
 	private bool windrightBool = false;
 
@@ -23,7 +24,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-#if UNITY_STANDALONE		
+	#if UNITY_STANDALONE		
 		//Keyboard INPUT
 		//get the input
 		if(GameManager.alive){
@@ -34,9 +35,9 @@ public class PlayerController : MonoBehaviour {
 		} else {
 			calculatedForce = Vector3.right * 0f;
 		}
-#endif
+	#endif
 		
-#if UNITY_ANDROID
+	#if UNITY_ANDROID
 
 		if(GameManager.alive){
 
@@ -64,15 +65,18 @@ public class PlayerController : MonoBehaviour {
 		} else {
 			calculatedForce = Vector3.right * 0f;
 		}
-#endif
+	#endif
 
 		//add force to rigidBody
 		rb.AddForce (calculatedForce);
+
+		myAudioManager = FindObjectOfType<AudioManager>(); //Doesn't work in Awake() or in Start(), is not a performent way to do it
 
 		if(calculatedForce.x > 0f && !windleftBool){
 			//Debug.Log("WindLeft");
 			windEffectLeft.Play();
 			windEffectRight.Stop();
+			myAudioManager.Play("WindSound");
 			windleftBool = true;
 		}
 
@@ -80,12 +84,14 @@ public class PlayerController : MonoBehaviour {
 			//Debug.Log("WindRight");
 			windEffectRight.Play();
 			windEffectLeft.Stop();
+			myAudioManager.Play("WindSound");
 			windrightBool = true;
 		}
 
 		if(calculatedForce.x == 0f){
 			windEffectLeft.Stop();
 			windEffectRight.Stop();
+			myAudioManager.Stop("WindSound");
 			windleftBool = false;
 			windrightBool = false;
 		}

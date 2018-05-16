@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1259257818}
-  m_IndirectSpecularColor: {r: 0.42981577, g: 0.6030382, b: 0.6979957, a: 1}
+  m_IndirectSpecularColor: {r: 0.44084996, g: 0.6179818, b: 0.7150894, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6413,6 +6413,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 500c260d0946d084096a241ca2c286ef, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &618099358 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114771504785373956, guid: 500c260d0946d084096a241ca2c286ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 618099357}
+  m_Script: {fileID: 11500000, guid: 663f8319d60ae774b9a66bb357089d6c, type: 3}
 --- !u!1 &618221204
 GameObject:
   m_ObjectHideFlags: 0
@@ -9764,6 +9770,11 @@ Prefab:
       propertyPath: windEffectLeft
       value: 
       objectReference: {fileID: 1768665929}
+    - target: {fileID: 114733429223967498, guid: 131d07511c85919439eba1ca6da253f0,
+        type: 2}
+      propertyPath: myAudioManager
+      value: 
+      objectReference: {fileID: 618099358}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 131d07511c85919439eba1ca6da253f0, type: 2}
   m_IsPrefabParent: 0
@@ -15944,7 +15955,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1604313646}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4df270d5efcb8fb4cb78560beb09f250, type: 3}
   m_Name: 

@@ -53,6 +53,17 @@ public class AudioManager : MonoBehaviour {
 		s.source.Play();
 	}
 
+	// Use anywhere in code to stop a sound	
+	public void Stop (string name) {
+		Sound s = Array.Find(sounds, sound => sound.name == name);
+		if (s == null) {
+			Debug.LogWarning("Sound: " + name + " not found!");
+			return;
+		}
+		s.source.Stop();
+
+	}
+
 	// Volumeslider code
 	public void Volume (float volume) {
 		audioMixer.SetFloat("volume", volume);

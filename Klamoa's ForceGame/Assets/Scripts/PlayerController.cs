@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour {
 	private bool windleftBool = false;
 	private bool windrightBool = false;
 
+	void Awake () {
+		myAudioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+	}
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
@@ -70,7 +74,7 @@ public class PlayerController : MonoBehaviour {
 		//add force to rigidBody
 		rb.AddForce (calculatedForce);
 
-		myAudioManager = FindObjectOfType<AudioManager>(); //Doesn't work in Awake() or in Start(), is not a performent way to do it
+		//myAudioManager = FindObjectOfType<AudioManager>(); //Doesn't work in Awake() or in Start(), is not a performent way to do it
 
 		if(calculatedForce.x > 0f && !windleftBool){
 			//Debug.Log("WindLeft");

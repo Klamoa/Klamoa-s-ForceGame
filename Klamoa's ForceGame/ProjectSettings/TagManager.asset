@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - fallingObject
+  - AudioManager
   layers:
   - Default
   - TransparentFX

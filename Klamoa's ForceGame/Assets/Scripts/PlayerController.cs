@@ -105,7 +105,11 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.gameObject.tag == "fallingObject"){
-			GameObject.FindObjectOfType<GameManager>().GameOverOrPause();
+			GameObject[] fallingObjects = GameObject.FindGameObjectsWithTag("fallingObject");
+			foreach (GameObject g in fallingObjects) {
+				Destroy(g);
+			}
+			GameManager.alive = false;
 		}
 	}
 }

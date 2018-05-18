@@ -109,6 +109,7 @@ public class PlayerController : MonoBehaviour {
 			foreach (GameObject g in fallingObjects) {
 				Destroy(g);
 			}
+			FindObjectOfType<GameManager>().SetGameOverPauseScreen();
 			GameManager.alive = false;
 		}
 	}

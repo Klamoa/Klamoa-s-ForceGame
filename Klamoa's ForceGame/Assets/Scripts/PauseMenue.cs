@@ -5,7 +5,8 @@ using TMPro;
 
 public class PauseMenue : MonoBehaviour {
 
-	public GameObject pauseMenue;
+	[Header("Pause Menue")]
+	public Animator animatorPauseMenue;
 	public TextMeshProUGUI scoreTextPauseMenue;
 	public TextMeshProUGUI highScoreTextPauseMenue;
 
@@ -19,14 +20,18 @@ public class PauseMenue : MonoBehaviour {
 
 		Time.timeScale = 0f;
 
-		pauseMenue.SetActive(true);
+		FindObjectOfType<GameManager>().SetGameOverPauseScreen();
+
+		animatorPauseMenue.SetBool("PauseMenueOn", true);
 	}
 
 	public void RunGame () {
 
 		Time.timeScale = 1f;
 
-		pauseMenue.SetActive(false);
+		FindObjectOfType<GameManager>().ResetGameOverPauseScreen();
+
+		animatorPauseMenue.SetBool("PauseMenueOn", false);
 
 	}
 

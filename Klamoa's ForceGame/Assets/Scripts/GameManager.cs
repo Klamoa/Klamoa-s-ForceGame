@@ -9,17 +9,27 @@ public class GameManager : MonoBehaviour {
 	public static int score = 0;
 	public static int highScore;
 	public static bool alive;
-	public GameObject gameOverScreen;
-	public GameObject mobileInput;
+
+	[Header("Player")]
 	public GameObject player;
-	public TextMeshProUGUI scoreText;
+	
+	[Header("UI")]
+	public TextMeshProUGUI scoreText;	
+
+	[Header("Mobile Input")]	
+	public GameObject mobileInput;
+
+	[Header("Game Over")]
+	public GameObject gameOverPauseScreen;
+	public Animator animatorGameOverScreen;	
 	public TextMeshProUGUI scoreTextGameOverScreen;
 	public TextMeshProUGUI highScoreTextGameOverScreen;
+
+	[Header("Startsettings")]
 	public Vector3 startPosition = new Vector3(0f, 1f, 0f);
 
 	void Start () {
 		ResetGame();
-		gameOverScreen.SetActive(false);
 		mobileInput.SetActive(false);
 		highScore = PlayerPrefs.GetInt("HighScore");
 	}
@@ -43,14 +53,15 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void GameUI () {
-	#if UNITY_ANDRIOD
+	#if UNITY_ANDROID
 		mobileInput.SetActive(true);
 	#endif
-		gameOverScreen.SetActive(!alive);
+		animatorGameOverScreen.SetBool("GameOverOn", !alive);
 	}
 
 	void ResetGame () {
 		score = 0;
+		ResetGameOverPauseScreen();
 		player.transform.position = startPosition;
 		player.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 		alive = true;
@@ -60,6 +71,12 @@ public class GameManager : MonoBehaviour {
 		ResetGame();
 	}
 
+	public void SetGameOverPauseScreen () {
+		gameOverPauseScreen.SetActive(true);
+	}
 
+	public void ResetGameOverPauseScreen () {
+		gameOverPauseScreen.SetActive(false);
+	}
 
 }

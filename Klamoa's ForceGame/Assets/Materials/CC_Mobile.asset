@@ -121,7 +121,7 @@ MonoBehaviour:
         neutralWhiteClip: 10
       basic:
         postExposure: 1
-        temperature: 12.4
+        temperature: 13.4
         tint: 0
         hueShift: 0
         saturation: 1
@@ -298,8 +298,8 @@ MonoBehaviour:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.392
-      smoothness: 0.193
+      intensity: 0.282
+      smoothness: 0.24
       roundness: 1
       mask: {fileID: 0}
       opacity: 1

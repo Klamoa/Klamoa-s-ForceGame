@@ -64,6 +64,8 @@ public class GameManager : MonoBehaviour {
 		ResetGameOverPauseScreen();
 		player.transform.position = startPosition;
 		player.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+		player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+		player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 		alive = true;
 	}
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1259257818}
-  m_IndirectSpecularColor: {r: 0.4442686, g: 0.6225773, b: 0.7203253, a: 1}
+  m_IndirectSpecularColor: {r: 0.439299, g: 0.6260377, b: 0.7200415, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -676,7 +676,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 125, y: 100}
+  m_AnchoredPosition: {x: 130, y: 100}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &45715850
@@ -830,7 +830,7 @@ RectTransform:
   - {fileID: 1849609631}
   - {fileID: 1224452787}
   m_Father: {fileID: 1205531537}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -849,14 +849,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: efdd61b1f5e1e764489443d6f810d76d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 342b9675a073d204db74424bf4d38cb0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1967,7 +1967,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 705, y: 100}
+  m_AnchoredPosition: {x: 650, y: 100}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &179482596
@@ -3603,7 +3603,7 @@ RectTransform:
   - {fileID: 980873964}
   - {fileID: 1862495095}
   m_Father: {fileID: 1205531537}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3629,7 +3629,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: efdd61b1f5e1e764489443d6f810d76d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be190593c8636c04baf2dc5b2b432f9b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6767,7 +6767,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1205531537}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10760,6 +10760,16 @@ Prefab:
       propertyPath: myAudioManager
       value: 
       objectReference: {fileID: 618099358}
+    - target: {fileID: 114733429223967498, guid: 131d07511c85919439eba1ca6da253f0,
+        type: 2}
+      propertyPath: rectLeft.x
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 114733429223967498, guid: 131d07511c85919439eba1ca6da253f0,
+        type: 2}
+      propertyPath: rectRight.x
+      value: 650
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 131d07511c85919439eba1ca6da253f0, type: 2}
   m_IsPrefabParent: 0
@@ -12573,7 +12583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1108346033
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12587,7 +12597,7 @@ RectTransform:
   - {fileID: 179482595}
   - {fileID: 45715849}
   m_Father: {fileID: 1205531537}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13845,10 +13855,10 @@ RectTransform:
   m_Children:
   - {fileID: 1893183456}
   - {fileID: 1477043978}
+  - {fileID: 1108346033}
   - {fileID: 595481760}
   - {fileID: 57984136}
   - {fileID: 332800768}
-  - {fileID: 1108346033}
   - {fileID: 203744023}
   m_Father: {fileID: 0}
   m_RootOrder: 8

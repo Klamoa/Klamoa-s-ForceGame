@@ -32,4 +32,10 @@ public class FallingObject : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerExit(Collider other) {
+		if (other.gameObject.tag == "ground") {
+			
+		}
+	}
+
 }

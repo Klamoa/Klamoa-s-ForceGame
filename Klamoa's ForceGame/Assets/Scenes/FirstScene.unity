@@ -9777,7 +9777,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &878425202
 Prefab:
@@ -10743,7 +10743,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4565939777776048, guid: 131d07511c85919439eba1ca6da253f0, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114733429223967498, guid: 131d07511c85919439eba1ca6da253f0,
         type: 2}
@@ -17375,11 +17375,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnObjects:
-  - {fileID: 1835522705487092, guid: 6c02e650e4e266d468eba36305fc7749, type: 2}
+  - {fileID: 1484787725689264, guid: 01746639f24db894fb4c8be725721d1f, type: 2}
+  - {fileID: 1484787725689264, guid: 4c3cf35cd6aeb2d40a8bd59836a55876, type: 2}
   minTimeBetweenSpawns: 0.5
   maxTimeBetweenSpawns: 2
   timeBetweenSpawn: 2
   screenHalfWith: 4
+  spawnAngleZ: {x: 10, y: -10}
+  spawnAngleX: {x: 10, y: -10}
 --- !u!4 &1604313648
 Transform:
   m_ObjectHideFlags: 0

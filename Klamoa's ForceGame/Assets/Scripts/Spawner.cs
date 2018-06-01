@@ -9,6 +9,8 @@ public class Spawner : MonoBehaviour {
 	public float maxTimeBetweenSpawns = 2f;
 	public float timeBetweenSpawn;
 	public float screenHalfWith = 4.3f;
+	public Vector2 spawnAngleZ = new Vector2(15f, -15f);
+	public Vector2 spawnAngleX = new Vector2(15f, -15f);
 
 	float nextSpawn;
 
@@ -32,11 +34,14 @@ public class Spawner : MonoBehaviour {
 
 				//calculate random posiotion and spawn gameObject
 				float randomXPosition = Random.Range (-screenHalfWith, screenHalfWith);
+				float randomRotationZ = Random.Range (spawnAngleZ.x, spawnAngleZ.y);
+				float randomRotationX = Random.Range (spawnAngleX.x, spawnAngleX.y);
 				Vector3 spawnPosition = new Vector3 (randomXPosition, 13f, 0f);
-				GameObject myObject = (GameObject)Instantiate (spawnObjects[randomObject], spawnPosition, Quaternion.identity);
+				Vector3 spawnRotation = new Vector3 (randomRotationX, 0f, randomRotationZ);
+				GameObject myObject = (GameObject)Instantiate (spawnObjects[randomObject], spawnPosition, Quaternion.Euler(spawnRotation));
 
 				//applying scale
-				myObject.transform.localScale = new Vector3 (1, 1, 1);
+				//myObject.transform.localScale = new Vector3 (1, 1, 1);
 
 				//givng mesh a random colour
 				//MeshRenderer myMeshRenderer = myObject.GetComponent<MeshRenderer> ();

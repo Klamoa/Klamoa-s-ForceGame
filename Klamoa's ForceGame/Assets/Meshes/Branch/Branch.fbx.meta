@@ -6,12 +6,31 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Branch
+    100004: Branch_01
+    100006: Branch_02
     400000: //RootNode
+    400002: Branch
+    400004: Branch_01
+    400006: Branch_02
     2100000: Stone
     2300000: //RootNode
+    2300002: Branch
+    2300004: Branch_01
+    2300006: Branch_02
     3300000: //RootNode
+    3300002: Branch
+    3300004: Branch_01
+    3300006: Branch_02
     4300000: Branch
-  externalObjects: {}
+    4300002: Branch_02
+    4300004: Branch_01
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone
+    second: {fileID: 2100000, guid: 06ef95bb5f744124ea3f991e40605ec6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

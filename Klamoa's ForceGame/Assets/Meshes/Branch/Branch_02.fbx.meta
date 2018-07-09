@@ -25,7 +25,12 @@ ModelImporter:
     4300000: Branch_01
     4300002: Branch
     4300004: Branch_02
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone
+    second: {fileID: 2100000, guid: 06ef95bb5f744124ea3f991e40605ec6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

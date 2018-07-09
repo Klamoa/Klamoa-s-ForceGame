@@ -15,12 +15,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Stone
-    second: {fileID: 2100000, guid: d5db40c872522014d9cd9e9affd1c7fa, type: 2}
+    second: {fileID: 2100000, guid: 06ef95bb5f744124ea3f991e40605ec6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

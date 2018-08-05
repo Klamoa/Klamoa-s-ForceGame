@@ -6,11 +6,84 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Armature
+    100004: Bird.001
+    100006: Camera
+    100008: Ground
+    100010: Leg.001
+    100012: Leg.001_end
+    100014: Leg.002
+    100016: Leg.002_end
+    100018: Main
+    100020: Main.001
+    100022: Main.003
+    100024: Main.004
+    100026: Main.005
+    100028: Main.006
+    100030: Main.006_end
+    100032: Main.007
+    100034: Main.008
+    100036: Main.009
+    100038: Main.010
+    100040: Main.010_end
+    100042: Sun
+    100044: Tree_low
+    100046: Wing
+    100048: Wing.001
+    100050: Wing.001_end
+    100052: Wing.002
+    100054: Wing.003
+    100056: Wing.003_end
     400000: //RootNode
+    400002: Armature
+    400004: Bird.001
+    400006: Camera
+    400008: Ground
+    400010: Leg.001
+    400012: Leg.001_end
+    400014: Leg.002
+    400016: Leg.002_end
+    400018: Main
+    400020: Main.001
+    400022: Main.003
+    400024: Main.004
+    400026: Main.005
+    400028: Main.006
+    400030: Main.006_end
+    400032: Main.007
+    400034: Main.008
+    400036: Main.009
+    400038: Main.010
+    400040: Main.010_end
+    400042: Sun
+    400044: Tree_low
+    400046: Wing
+    400048: Wing.001
+    400050: Wing.001_end
+    400052: Wing.002
+    400054: Wing.003
+    400056: Wing.003_end
+    2000000: Camera
     2100000: lowpoly
+    2100002: Ground
     2300000: //RootNode
+    2300002: Bird.001
+    2300004: Ground
+    2300006: Tree_low
     3300000: //RootNode
+    3300002: Bird.001
+    3300004: Ground
+    3300006: Tree_low
     4300000: Bird
+    4300002: Bird.001
+    4300004: Tree_low
+    4300006: Ground
+    7400000: Armature|Idle
+    7400002: Armature|Peck
+    9500000: //RootNode
+    10800000: Sun
+    11100000: //RootNode
+    13700000: Bird.001
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -35,14 +108,70 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Idle
+      takeName: Armature|Idle
+      firstFrame: 0
+      lastFrame: 7
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Peck
+      takeName: Armature|Peck
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -84,13 +213,13 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: Armature
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
